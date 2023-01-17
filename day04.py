@@ -1,11 +1,8 @@
-# list comprehension
+# er=x 7-4
 
-odd_lists = [ i for i in range(1, 11) if i % 2 == 1]
-odd_tuple = ( i for i in range(1, 11) if i % 2 == 1)
-# for i in range(1, 11):
-#     if i% 2 ==1 :
-#         odd_lists.append(i)
-# print(odd_lists)
-print(odd_lists)
-print(odd_tuple)
-print(type(odd_tuple) # sd==generator 메모리 거의  저장안함)
+things = ['mozzarella', "cinderella", "salmonella"]
+things[-2] = print(things[-2].title())
+print(things)
+things[0] =  things[0].upper()
+print(things)
+print(f'Delete the {things.pop()} from things, Get nobel prize')
