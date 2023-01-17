@@ -1,24 +1,33 @@
 # list
-# scores = ('B+', 'A+', 'C+')
-# print(scores[1], scores[2])
-# temp = list(scores)
-# temp[1] = 'C+'
-# temp[2] = 'A+'
-# scores = tuple(temp)
-# print(scores[1], scores[2])
-
-big_bang = ['GD', '태양', '탑', '대성', '승리']
-exo = ['백현', '첸']
-big_bang.insert(1, '김박사')
-exo.append(big_bang)
-print(exo)
-print(exo[2][2]) #태양
-exo[-2] = '시우민'
-print(exo[2].pop()) # 승리 pop
-print(exo)
-print(exo[2].pop(-2)) # 탑 pop
-print(exo)
-del exo[2][-1]
- # 대성 del
-exo[2].remove('김박사')
-print(exo)
+import copy
+a = [1, 2, [5, -9]]
+b = a.copy()
+c = list(a)
+d = a[:]
+a[1] = -77 # immutable
+a[2][1] =7  # mutable
+# b = copy.deepcopy(a) #별도의 메모리 할당
+a[2][1] = 7 #mutable, deepcopy
+print(a, b)
+# a = [1, 2, [5, -9]]
+# b = a.copy()
+# c = list(a)
+# d = a[:]
+# a[2][1] = 7 # mutable, b/c/d affects
+# print(a, b, c, d)
+# primes = [2, 19, 3.0, 5, 7, 11]
+# primes_cp = primes
+# print(primes_cp)
+# primes[-1] = 'lunch time'
+# print(primes_cp)
+# primes_cp[0] = 'morning coffee'
+# print(primes_cp)
+# primes = [2, 19, 3.0, 5, 7, 11]
+# print(primes)
+# primes.sort()
+# primes_sorted = sorted(primes)
+# print(primes)
+# #
+# mixed = ['6', '4', '5', 'A', '7', '트와이스', 'B', 'b', '마마무']
+# mixed.sort(reverse=True)
+# print(mixed)
